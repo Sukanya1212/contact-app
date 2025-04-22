@@ -35,9 +35,33 @@ function App() {
 
   return (
     <div className="ui container">
-      <Header />
-      <AddContact addContactHandler={addContactHandler} />
+    
+      <div style= {{marginLeft: '6%'}} className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 p-10 flex justify-center">
+  <div className={`w-full max-w-6xl ${contacts.length > 0 ? "flex flex-col md:flex-row gap-10" : ""}`}>
+    
+    {/* Add Contact Form */}
+    <div   className={`transition-all duration-700 ease-in-out ${
+    contacts.length > 0 ? "md:w-1/2" : "w-full"
+  }`}>
+      <div className="bg-white rounded-xl shadow-lg p-8 animate-slide-in">
+        {/* <h2 className="text-2xl font-bold text-center mb-6">Add Contact</h2> */}
+       <AddContact addContactHandler={addContactHandler} />
+      </div>
+    </div>
+
+    {/* Contact List */}
+    {contacts.length > 0 && (
+      <div className="md:w-1/2 space-y-4 animate-fade-in">
       <ContactList contacts={contacts} getContactId={removeContactHandler} />
+      </div>
+    )}
+
+  </div>
+</div>
+
+
+      {/* <AddContact addContactHandler={addContactHandler} />
+      <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
     </div>
   );
 }
