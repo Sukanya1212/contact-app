@@ -25,9 +25,11 @@ export default function AddContact({ addContactHandler }) {
     return (
     
         <div className="flex justify-center items-center bg-gradient-to-br from-indigo-300 via-pink-300 to-yellow-300 p-6 bg-pattern-1 animate-fade-in" style={{height: '40rem'}}>
-        <h2 className='absolute text-3xl font-bold text-pink-700' style={{top: '11%'}}> Contact Manager</h2>
+        <h2 className='absolute text-3xl sm:text-3xl font-bold text-pink-700' style={{top: '11%'}}> Contact Manager</h2>
             <div className="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-md border border-purple-400 transform transition-all hover:scale-105 hover:shadow-2xl duration-500 ease-in-out">
-                <h2 className="text-3xl font-extrabold mb-8 text-center text-purple-700">Add a New Contact</h2>
+                <h2 className="lg:text-3xl sm:text-2xl font-extrabold mb-6 text-center text-purple-700">Add a New Contact</h2>
+                {/* <h2 className="text-xl sm:text-2xl font-extrabold mb-6 text-center text-purple-700">Add a New Contact</h2> */}
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                         <label htmlFor="name" className="block text-gray-800 font-semibold mb-2">Name</label>
