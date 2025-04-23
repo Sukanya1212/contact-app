@@ -43,7 +43,7 @@ function App() {
           {/* Add Contact Form */}
           <div className={`transition-all duration-700 ease-in-out ${contacts.length > 0 ? "md:w-1/2" : "w-full"
             }`}>
-            <div className="bg-white rounded-xl shadow-lg p-8 animate-slide-in">
+            <div className="bg-white rounded-xl shadow-lg lg:p-8 animate-slide-in">
               {/* <h2 className="text-2xl font-bold text-center mb-6">Add Contact</h2> */}
               <AddContact addContactHandler={addContactHandler} />
             </div>
